@@ -10,7 +10,9 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      Rent a car
     </div>
   );
 };
+
+// https://64bc2c2e7b33a35a44471974.mockapi.io/api/rentcar/:endpoint
