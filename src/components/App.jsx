@@ -1,17 +1,20 @@
+import { Route, Routes } from "react-router-dom";
+
+import Home from '../pages/Home';
+import Catalog from '../pages/Catalog';
+import Favorites from '../pages/Favorites';
+import { Layout } from "./Layout/Layout";
+
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      Rent a car
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout/>}>
+        <Route index element={ <Home/>} />
+        <Route path="catalog" element={ <Catalog/>}/>
+        <Route path="favorites" element={<Favorites />} />
+      </Route>
+   </Routes>
   );
 };
 
